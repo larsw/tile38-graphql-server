@@ -1,15 +1,30 @@
 {
   "name": "tile38-graphql-server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "A GraphQL frontend for Tile 38",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lars Wilhelmsen <lars@sral.org>",
   "license": "ISC",
   "devDependencies": {
+    "@graphql-codegen/cli": "^1.17.8",
+    "@graphql-codegen/typescript": "^1.17.9",
+    "@graphql-codegen/typescript-resolvers": "^1.17.9",
     "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.16.1",
+    "express": "^4.17.1",
+    "graphql": "^15.3.0",
+    "tile38": "^0.7.0",
+    "ts-node": "^9.0.0"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
   }
 }

@@ -1,0 +1,33 @@
+input BoundsInput {
+  minLat: Float!
+  minLng: Float!
+  maxLat: Float!
+  maxLng: Float!
+}
+
+type Query {
+  withinBounds(key: String, bounds: BoundsInput): [Track]
+  keys(pattern: String): [String]
+}
+
+type KeyValuePair {
+  key: String
+  value: String
+}
+
+type PointObject {
+  type: String!
+  properties: [KeyValuePair!]
+  coordinates: [Float]
+}
+
+type Position {
+  lat: Float!
+  lng: Float!
+  alt: Float
+}
+
+type Track {
+  id: String
+  object: PointObject
+}
